@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Barlow Semi Condensed";
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*Grids*/
+
+.main {
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;  
+}
+
+.sub-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/*Containers*/
+
+.contain-1 {
+    border-radius: 10px;
+    grid-column: 1 / span 2;
+    position: relative;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.contain-2 {
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.contain-3 {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.contain-4 {
+    border-radius: 10px;
+    background-color: hsl(219, 29%, 14%);
+    grid-column: 2 / span 2;
+}
+
+.contain-5 {
+    border-radius: 10px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.quotes {
+    position: absolute;
+    right: 20%;
+    top: 0;
+}
+
+/*Profile*/
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.info {
+    line-height: 0.1em;
+    padding-left: 15px;
+}
+
+.pp {
+    border-radius: 50%;
+    width: 30px;
+}
+
+/*Texts*/
+
+.name-black {
+    color: hsl(217, 19%, 35%);
+}
+
+.name-white {
+    color: hsl(210, 46%, 95%);
+}
+
+.status {
+    color:hsl(0, 0%, 81%);
+}
+
+.tittle-white {
+    color: white;
+    position: relative;
+    line-height: 1.4;
+}
+
+.tittle-black {
+    color: hsl(217, 19%, 35%);
+    line-height: 1.4em;
+}
+
+.paragraph {
+    color: hsl(0, 0%, 81%);
+    line-height: 1.5em;
+}
+
+
+
+/*Contens*/
+
+.content {
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        max-width: 80%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
